@@ -15,12 +15,14 @@ def single_number(arr):
         #if x is a repeating number
         if x in non_dupe:
             #we need to pop it at its index so we can move on
-            non_dupe.pop(non_dupe.index(x))         
+            non_dupe.pop(non_dupe.index(x))   
+     
         else:
             #if we do find this non-repeating number x, append it to the non_dupe array
             non_dupe.append(x)
     
-    return non_dupe
+    # the return is inside an array, how to convert to standalone integer? sum
+    return sum(non_dupe)
        
          
 
