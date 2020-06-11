@@ -10,17 +10,14 @@ def single_number(arr):
 
     #create a new array for the not duplicate number to go in
     non_dupe = []
-    #loop through array
+    #loop through array to find x
     for x in arr:
-        #in order for x to be in the non_dupe array
+        #if x is a repeating number
         if x in non_dupe:
-            #we need to pop it at its index
-            non_dupe.pop(non_dupe.index(x))    
-        #I got this as an error so I added this to the if/else, in case there is NO repeating number, we can return whatever is in the 0th position
-        # elif non_dupe is None:
-        #     return None
-        #if we do find this non-repeating number, append it to the non_dupe array
+            #we need to pop it at its index so we can move on
+            non_dupe.pop(non_dupe.index(x))         
         else:
+            #if we do find this non-repeating number x, append it to the non_dupe array
             non_dupe.append(x)
     
     return non_dupe
