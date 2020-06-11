@@ -19,23 +19,18 @@ def product_of_all_other_numbers(arr):
     # Your code here
     #To-do--
     # Loop through the array and when you land on a number remove it and multiply the rest of the numbers in the array, return that number to a new array
-    #maybe something where you multiply the right side of the array and the left side of the array and then combine those two into a final integer you put in a new array?
-    right = [0] * len(arr)
-    right[-1] = arr[-1]
+    #create a new array to put prods in
+    new_arr = []
 
-    for i in range(1, len(arr)):
-        right[len(arr)-i-1] = right[len(arr)-i] * arr[len(arr)-i-1]
-        output = [0]*len(arr)
-        prefix = 1
-        current_index = 0
-        while current_index < len(output)-1:
-            output[current_index] = prefix * right[current_index+1]
-            prefix *= arr[current_index]
-            current_index +=1
-            output[-1] = prefix
-        return output
+    for i in arr:
+        arr_product = 1
 
-    
+        for j in arr:     
+            if j != i:
+                arr_product = arr_product * j
+        new_arr.append(arr_product)
+
+    return new_arr
     
 
 if __name__ == '__main__':
