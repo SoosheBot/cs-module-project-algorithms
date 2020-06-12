@@ -9,7 +9,6 @@ def moving_zeroes(arr):
     #shift 0s to the left (end?) of the array then return the altered array
     #if there are no 0s, print the array as it is
     #create a variable to house the nonzeroes
-
     moved = 0
     #Loop -- for x in the range of the length of array...
     for x in range(len(arr)):
@@ -18,7 +17,7 @@ def moving_zeroes(arr):
             #the array's order becomes the moved nonzero number to the left, and the zero to the right for the entire array
             arr[x], arr[moved] = arr[moved], arr[x] 
         if arr[moved] != 0: 
-            #if moved didn't equal zero though, then jump over it to look at the next one
+            #if moved didn't equal zero though, then move the index to look at the next one
             moved+= 1
     
     return arr

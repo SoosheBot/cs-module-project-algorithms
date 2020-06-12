@@ -38,6 +38,7 @@ def product_of_all_other_numbers(arr):
 
     return new_arr
 
+#High order components and callback functions difference -- javascript
     
 
 if __name__ == '__main__':
